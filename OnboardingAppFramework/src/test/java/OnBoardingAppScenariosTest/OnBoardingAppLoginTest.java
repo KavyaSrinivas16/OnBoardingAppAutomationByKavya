@@ -58,7 +58,16 @@ public class OnBoardingAppLoginTest extends BaseClass {
 		String ContractAdminName = elib.getDataFromExcel("Sheet2", 1, 2);
 		clp.getContractAdminNameTxtFld().sendKeys(ContractAdminName);
 
-		for (int counterparty = 0; counterparty < 5; counterparty++) {
+		wlib.scrollToElement(driver, clp.getNameOfContractTxtFld());
+		wlib.waitForElementPresent(driver, clp.getNameOfContractTxtFld());
+		Thread.sleep(5000);
+		clp.getChooseFileButton().click();
+		Thread.sleep(2000);
+		wlib.selectFile(flib.getDataFromPropertiesFile("path"));
+		Thread.sleep(5000);
+
+		int partiesDetails = 4; //Give the index of starting data
+		for (int counterparty = 0; counterparty < 50; counterparty++) {
 
 			if (!(counterparty == 0)) {
 				wlib.scrollToElement(driver, clp.getAddPartiesLnk());
@@ -67,21 +76,21 @@ public class OnBoardingAppLoginTest extends BaseClass {
 			}
 
 			WebElement counterPartyName = clp.getCounterPartyNameTxtFld().get(counterparty);
-			String counterPartyNameValue = elib.getDataFromExcel("Sheet2", 4, 1);
+			String counterPartyNameValue = elib.getDataFromExcel("Sheet2", partiesDetails, 1);
 			wlib.scrollToElement(driver, counterPartyName);
 			wlib.waitForElementPresent(driver, counterPartyName);
 			counterPartyName.click();
 			counterPartyName.sendKeys(counterPartyNameValue);
 
 			WebElement companyName = clp.getCounterPartyCompanyNameTxtFld().get(counterparty);
-			String CounterPartyCompanyName = elib.getDataFromExcel("Sheet2", 4, 2);
+			String CounterPartyCompanyName = elib.getDataFromExcel("Sheet2", partiesDetails, 2);
 			wlib.scrollToElement(driver, companyName);
 			wlib.waitForElementPresent(driver, companyName);
 			companyName.click();
 			companyName.sendKeys(CounterPartyCompanyName);
 
 			WebElement emailIDfield = clp.getCounterPartyEmailIdTxtFld().get(counterparty);
-			String CounterPartyEmailId = elib.getDataFromExcel("Sheet2", 4, 3);
+			String CounterPartyEmailId = elib.getDataFromExcel("Sheet2", partiesDetails, 3);
 			wlib.scrollToElement(driver, emailIDfield);
 			wlib.waitForElementPresent(driver, emailIDfield);
 			emailIDfield.click();
@@ -105,18 +114,11 @@ public class OnBoardingAppLoginTest extends BaseClass {
 					viewer.click();
 				}
 			}
+			partiesDetails++;
 
 		}
 
-		wlib.scrollToElement(driver, clp.getNameOfContractTxtFld());
-		wlib.waitForElementPresent(driver,clp.getNameOfContractTxtFld());
-		Thread.sleep(5000);
-		clp.getChooseFileButton().click();
-		Thread.sleep(2000);
-		wlib.selectFile(flib.getDataFromPropertiesFile("path"));
-		Thread.sleep(5000);
-
-		// clp.getContinueBtn().click();
+		clp.getContinueBtn().click();
 
 	}
 }
