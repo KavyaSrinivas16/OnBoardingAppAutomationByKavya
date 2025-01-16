@@ -6,7 +6,7 @@
       <class name="OnBoardingAppScenariosTest.OnBoardingAppLoginTest">
         <methods>
           <include name="configAM"/>
-          <include name="createContractTest"/>
+          <include name="LoginTest"/>
           <include name="configBM"/>
           <include name="configAS"/>
           <include name="configAC"/>

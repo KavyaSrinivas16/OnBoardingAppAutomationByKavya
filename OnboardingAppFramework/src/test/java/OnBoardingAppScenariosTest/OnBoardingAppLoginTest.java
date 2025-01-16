@@ -1,7 +1,9 @@
 package OnBoardingAppScenariosTest;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import com.onboarding.fintech.generic.basetest.BaseClass;
 import com.onboarding.fintech.generic.objectrepository.AddEscrowAccountPage;
@@ -11,13 +13,13 @@ import com.onboarding.fintech.generic.objectrepository.HomePage;
 
 public class OnBoardingAppLoginTest extends BaseClass {
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void LoginTest() throws Throwable
 
 	{
 
+		SoftAssert sa = new SoftAssert();
 		// clicking on Add Escrow Account button in the homepage
-
 		Thread.sleep(3000);
 		HomePage hp = new HomePage(driver);
 		wlib.waitForElementPresent(driver, hp.getAddEscrowAccountBtn());
@@ -31,10 +33,19 @@ public class OnBoardingAppLoginTest extends BaseClass {
 		AddEscrowAccountPage aeap = new AddEscrowAccountPage(driver);
 		aeap.getEscroeNameTxtfld().sendKeys(escrowAccountName);
 		aeap.getCreateBtn().click();
+		hp.getUserManagementBtn().click();
+		hp.getEscrowAccountListBtn().click();
+		String actualResult = driver.findElement(By.xpath("//table//tr[1]//td[2]")).getText();
+		String expectedResult = escrowAccountName;
+		sa.assertEquals(actualResult, expectedResult, "account name should be same");
+		sa.assertAll();
 	}
 
 	@Test
 	public void createContractTest() throws Throwable {
+
+		SoftAssert sa = new SoftAssert();
+
 		// navigate to view more link of recently created escrow account
 
 		Thread.sleep(3000);
@@ -66,7 +77,7 @@ public class OnBoardingAppLoginTest extends BaseClass {
 		wlib.selectFile(flib.getDataFromPropertiesFile("path"));
 		Thread.sleep(5000);
 
-		int partiesDetails = 4; //Give the index of starting data
+		int partiesDetails = 4; // Give the index of starting data
 		for (int counterparty = 0; counterparty < 50; counterparty++) {
 
 			if (!(counterparty == 0)) {
@@ -119,6 +130,18 @@ public class OnBoardingAppLoginTest extends BaseClass {
 		}
 
 		clp.getContinueBtn().click();
+		Thread.sleep(2000);
+
+		driver.findElement(By.xpath("//button[text()='10']")).click();
+		String actualResult = driver.findElement(By.xpath("//table//tr[5]//td[3]")).getText();
+		String expectedResult = "kavya44@gmail.com";
+		sa.assertEquals(actualResult, expectedResult, "hgjhgjhgku");
+		sa.assertAll();
+		sa.assertTrue(actualResult.equals(expectedResult), "mentioned mail id is not matching");
+		sa.assertAll();
+
+		HomePage hp = new HomePage(driver);
+		wlib.scrollToElement(driver, hp.getUserProfileIcon());
 
 	}
 }

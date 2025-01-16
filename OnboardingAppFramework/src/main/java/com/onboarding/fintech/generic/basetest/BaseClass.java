@@ -37,7 +37,7 @@ public class BaseClass {
 
 	@BeforeSuite // (groups = { "smokeTest", "regressionTest" })
 	public void configBS() {
-		System.out.println("Coonect to db and report config");
+		System.out.println("Connect to db and report config");
 //		dblib.getDBConnection();
 
 	}
@@ -98,57 +98,5 @@ public class BaseClass {
 //		dblib.closeDBConnection();
 
 	}
-//	public FileUtility fLib = new FileUtility();
-//	public ExcelUtility eLib = new ExcelUtility();
-//	public JavaUtility jLib = new JavaUtility();
-//	public WebDriver driver = null;
-//	public WebDriverUtility wlib = new WebDriverUtility();
-//	public static WebDriver sdriver = null;
-//	
-//	protected LoginPage lp;
-//	protected HomePage hp;
-//	protected AddEscrowAccountPage aeap;
-//
-//	@BeforeClass
-//	public void configBC() throws Throwable {
-//
-//		System.out.println("==Launch the BROWSER==");
-//
-//		// String BROWSER = fLib.getDataFromPropertiesFile("browser");
-//		String BROWSER = System.getProperty("browser", fLib.getDataFromPropertiesFile("browser"));
-//		if (BROWSER.equals("chrome")) {
-//			WebDriverManager.chromedriver().setup();
-//			ChromeOptions chromeOptions = new ChromeOptions();
-//			driver = new ChromeDriver(chromeOptions);
-//		} else if (BROWSER.equals("firefox")) {
-//			WebDriverManager.firefoxdriver().setup();
-//			FirefoxOptions firefoxOption = new FirefoxOptions();
-//			driver = new FirefoxDriver(firefoxOption);
-//		} else if (BROWSER.equals("edge")) {
-//			WebDriverManager.edgedriver().setup();
-//			EdgeOptions edgeOption = new EdgeOptions();
-//			driver = new EdgeDriver(edgeOption);
-//		} else {
-//			WebDriverManager.chromedriver().setup();
-//			ChromeOptions chromeOptions = new ChromeOptions();
-//			driver = new ChromeDriver(chromeOptions);
-//		}
-//		sdriver = driver;
-//	}
-//	
-//	@BeforeMethod
-//	public void congigBM()
-//	{
-//		lp=new LoginPage(driver);
-//		hp=new HomePage(driver);
-//		aeap=new AddEscrowAccountPage(driver);
-//	}
-//	
-//	@AfterClass
-//	public void configAC() {
-//		System.out.println("==Close the BROWSER==");
-//		driver.quit();
-//
-//	}
 
 }
