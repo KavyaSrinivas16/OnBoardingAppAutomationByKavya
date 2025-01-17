@@ -1,41 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-01-16T05:44:42Z" name="Default suite" finished-at="2025-01-16T05:45:00Z" duration-ms="18315">
+  <suite started-at="2025-01-17T11:52:04Z" name="Suite" finished-at="2025-01-17T11:56:04Z" duration-ms="240250">
     <groups>
     </groups>
-    <test started-at="2025-01-16T05:44:42Z" name="Default test" finished-at="2025-01-16T05:45:00Z" duration-ms="18315">
+    <test started-at="2025-01-17T11:52:04Z" name="Test" finished-at="2025-01-17T11:56:04Z" duration-ms="240250">
       <class name="OnBoardingAppScenariosTest.OnBoardingAppLoginTest">
-        <test-method is-config="true" signature="configBS()[pri:0, instance:OnBoardingAppScenariosTest.OnBoardingAppLoginTest@76f4b65]" started-at="2025-01-16T05:44:42Z" name="configBS" finished-at="2025-01-16T05:44:42Z" duration-ms="39" status="PASS">
+        <test-method is-config="true" signature="configBS()[pri:0, instance:OnBoardingAppScenariosTest.OnBoardingAppLoginTest@22f31dec]" started-at="2025-01-17T11:52:04Z" name="configBS" finished-at="2025-01-17T11:52:04Z" duration-ms="26" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBS -->
-        <test-method is-config="true" signature="configBC()[pri:0, instance:OnBoardingAppScenariosTest.OnBoardingAppLoginTest@76f4b65]" started-at="2025-01-16T05:44:42Z" name="configBC" finished-at="2025-01-16T05:44:47Z" duration-ms="4607" status="PASS">
+        <test-method is-config="true" signature="configBC()[pri:0, instance:OnBoardingAppScenariosTest.OnBoardingAppLoginTest@22f31dec]" started-at="2025-01-17T11:52:04Z" name="configBC" finished-at="2025-01-17T11:52:10Z" duration-ms="6038" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBC -->
-        <test-method is-config="true" signature="configBM()[pri:0, instance:OnBoardingAppScenariosTest.OnBoardingAppLoginTest@76f4b65]" started-at="2025-01-16T05:44:47Z" name="configBM" finished-at="2025-01-16T05:44:51Z" duration-ms="4335" status="PASS">
+        <test-method is-config="true" signature="configBM()[pri:0, instance:OnBoardingAppScenariosTest.OnBoardingAppLoginTest@22f31dec]" started-at="2025-01-17T11:52:10Z" name="configBM" finished-at="2025-01-17T11:52:15Z" duration-ms="4736" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBM -->
-        <test-method signature="LoginTest()[pri:0, instance:OnBoardingAppScenariosTest.OnBoardingAppLoginTest@76f4b65]" started-at="2025-01-16T05:44:51Z" name="LoginTest" finished-at="2025-01-16T05:44:58Z" duration-ms="7202" status="PASS">
+        <test-method signature="LoginTest()[pri:0, instance:OnBoardingAppScenariosTest.OnBoardingAppLoginTest@22f31dec]" started-at="2025-01-17T11:52:15Z" name="LoginTest" finished-at="2025-01-17T11:52:23Z" duration-ms="8051" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginTest -->
-        <test-method is-config="true" signature="configAM()[pri:0, instance:OnBoardingAppScenariosTest.OnBoardingAppLoginTest@76f4b65]" started-at="2025-01-16T05:44:58Z" name="configAM" finished-at="2025-01-16T05:44:59Z" duration-ms="682" status="PASS">
+        <test-method is-config="true" signature="configAM()[pri:0, instance:OnBoardingAppScenariosTest.OnBoardingAppLoginTest@22f31dec]" started-at="2025-01-17T11:52:23Z" name="configAM" finished-at="2025-01-17T11:52:24Z" duration-ms="546" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAM -->
-        <test-method is-config="true" signature="configAC()[pri:0, instance:OnBoardingAppScenariosTest.OnBoardingAppLoginTest@76f4b65]" started-at="2025-01-16T05:44:59Z" name="configAC" finished-at="2025-01-16T05:45:00Z" duration-ms="1425" status="PASS">
+        <test-method is-config="true" signature="configBM()[pri:0, instance:OnBoardingAppScenariosTest.OnBoardingAppLoginTest@22f31dec]" started-at="2025-01-17T11:52:24Z" name="configBM" finished-at="2025-01-17T11:52:27Z" duration-ms="3682" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method signature="createContractTest()[pri:1, instance:OnBoardingAppScenariosTest.OnBoardingAppLoginTest@22f31dec]" started-at="2025-01-17T11:52:27Z" name="createContractTest" finished-at="2025-01-17T11:53:25Z" duration-ms="58080" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createContractTest -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:OnBoardingAppScenariosTest.OnBoardingAppLoginTest@22f31dec]" started-at="2025-01-17T11:53:25Z" name="configAM" finished-at="2025-01-17T11:53:26Z" duration-ms="483" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAM -->
+        <test-method is-config="true" signature="configBM()[pri:0, instance:OnBoardingAppScenariosTest.OnBoardingAppLoginTest@22f31dec]" started-at="2025-01-17T11:53:26Z" name="configBM" finished-at="2025-01-17T11:53:29Z" duration-ms="3674" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method signature="ContractAgreementTest()[pri:2, instance:OnBoardingAppScenariosTest.OnBoardingAppLoginTest@22f31dec]" started-at="2025-01-17T11:53:29Z" name="ContractAgreementTest" finished-at="2025-01-17T11:56:03Z" duration-ms="153535" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ContractAgreementTest -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:OnBoardingAppScenariosTest.OnBoardingAppLoginTest@22f31dec]" started-at="2025-01-17T11:56:03Z" name="configAM" finished-at="2025-01-17T11:56:04Z" duration-ms="647" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAM -->
+        <test-method is-config="true" signature="configAC()[pri:0, instance:OnBoardingAppScenariosTest.OnBoardingAppLoginTest@22f31dec]" started-at="2025-01-17T11:56:04Z" name="configAC" finished-at="2025-01-17T11:56:04Z" duration-ms="706" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAC -->
-        <test-method is-config="true" signature="configAS()[pri:0, instance:OnBoardingAppScenariosTest.OnBoardingAppLoginTest@76f4b65]" started-at="2025-01-16T05:45:00Z" name="configAS" finished-at="2025-01-16T05:45:03Z" duration-ms="3005" status="PASS">
+        <test-method is-config="true" signature="configAS()[pri:0, instance:OnBoardingAppScenariosTest.OnBoardingAppLoginTest@22f31dec]" started-at="2025-01-17T11:56:04Z" name="configAS" finished-at="2025-01-17T11:56:07Z" duration-ms="3015" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAS -->
       </class> <!-- OnBoardingAppScenariosTest.OnBoardingAppLoginTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

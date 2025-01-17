@@ -21,6 +21,7 @@ import com.onboarding.fintech.generic.objectrepository.AddEscrowAccountPage;
 import com.onboarding.fintech.generic.objectrepository.HomePage;
 import com.onboarding.fintech.generic.objectrepository.LoginPage;
 import com.onboarding.fintech.generic.webdriverutility.JavaUtility;
+import com.onboarding.fintech.generic.webdriverutility.UtilityClassObject;
 import com.onboarding.fintech.generic.webdriverutility.WebDriverUtility;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -33,7 +34,7 @@ public class BaseClass {
 	public JavaUtility jlib = new JavaUtility();
 	public WebDriverUtility wlib = new WebDriverUtility();
 	public WebDriver driver;
-	public static WebDriver sdriver;
+	public static WebDriver sdriver = null;
 
 	@BeforeSuite // (groups = { "smokeTest", "regressionTest" })
 	public void configBS() {
@@ -46,24 +47,26 @@ public class BaseClass {
 	@BeforeClass // (groups = { "smokeTest", "regressionTest" })
 	public void configBC(/* String browser */) throws Throwable {
 
-		System.out.println("launch browser");
-		// String BROWSER = browser;
-		String BROWSER = flib.getDataFromPropertiesFile("browser");
-
-		if (BROWSER.equalsIgnoreCase("chrome")) {
+		String BROWSER = System.getProperty("browser", flib.getDataFromPropertiesFile("browser"));
+		if (BROWSER.equals("chrome")) {
 			WebDriverManager.chromedriver().setup();
-//			ChromeOptions co = new ChromeOptions();
-//			co.addArguments("--remote-allow-origins=*");
-			driver = new ChromeDriver();
-		} else if (BROWSER.equalsIgnoreCase("firefox")) {
-			driver = new FirefoxDriver();
-		} else if (BROWSER.equalsIgnoreCase("edge")) {
-			driver = new EdgeDriver();
+			ChromeOptions chromeOptions = new ChromeOptions();
+			driver = new ChromeDriver(chromeOptions);
+		} else if (BROWSER.equals("firefox")) {
+			WebDriverManager.firefoxdriver().setup();
+			FirefoxOptions firefoxOption = new FirefoxOptions();
+			driver = new FirefoxDriver(firefoxOption);
+		} else if (BROWSER.equals("edge")) {
+			WebDriverManager.edgedriver().setup();
+			EdgeOptions edgeOption = new EdgeOptions();
+			driver = new EdgeDriver(edgeOption);
 		} else {
-			driver = new ChromeDriver();
+			WebDriverManager.chromedriver().setup();
+			ChromeOptions chromeOptions = new ChromeOptions();
+			driver = new ChromeDriver(chromeOptions);
 		}
 		sdriver = driver;
-		// UtilityClassObject.setDriver(driver);
+		UtilityClassObject.setDriver(driver);
 
 	}
 
