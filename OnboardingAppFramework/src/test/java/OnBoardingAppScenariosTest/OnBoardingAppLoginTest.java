@@ -254,7 +254,7 @@ public class OnBoardingAppLoginTest extends BaseClass {
 		sa.assertEquals(counterParty2Status, CounterPartyStatus);
 		sa.assertAll();
 
-		driver.findElement(By.xpath("//b[text()='View Document']")).click();
+		clp.getviewDocumentBtn().click();
 		Thread.sleep(10000);
 
 		driver.findElement(By.xpath("//button[text()='Accept All']")).click();

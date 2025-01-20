@@ -115,5 +115,12 @@ public class ContractsListPage extends WebDriverUtility {
 	public WebElement getChooseFileButton() {
 		return chooseFileButton;
 	}
+	
+	@FindBy(xpath = "//b[text()='View Document']")
+	private WebElement viewDocumentBtn;
+
+	public WebElement getviewDocumentBtn() {
+		return viewDocumentBtn;
+	}
 
 }
