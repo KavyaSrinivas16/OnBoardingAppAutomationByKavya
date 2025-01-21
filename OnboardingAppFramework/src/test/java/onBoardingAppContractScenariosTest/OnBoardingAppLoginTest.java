@@ -1,4 +1,4 @@
-package OnBoardingAppScenariosTest;
+package onBoardingAppContractScenariosTest;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -130,6 +130,7 @@ public class OnBoardingAppLoginTest extends BaseClass {
 		Thread.sleep(2000);
 
 		UtilityClassObject.getTest().log(Status.INFO, "verify the created email ID of last counterparty");
+		wlib.scrolldown(driver);
 		driver.findElement(By.xpath("//button[text()='2']")).click();
 		String actualResult = driver.findElement(By.xpath("//table//tr[5]//td[3]")).getText();
 		String expectedResult = "kavya4@gmail.com";

@@ -7,6 +7,8 @@
         <methods>
           <include name="ContractAgreementTest"/>
           <include name="configAM"/>
+          <include name="createContractTest"/>
+          <include name="LoginTest"/>
           <include name="configBM"/>
           <include name="configAS"/>
           <include name="configAC"/>
