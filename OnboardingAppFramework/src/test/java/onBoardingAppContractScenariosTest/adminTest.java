@@ -12,7 +12,7 @@ import com.onboarding.fintech.generic.objectrepository.HomePage;
 import com.onboarding.fintech.generic.webdriverutility.UtilityClassObject;
 
 @Listeners(com.onboarding.fintech.generic.lilstenerUtility.ListImpClass.class)
-public class ownerTest extends BaseClass{
+public class adminTest extends BaseClass{
 	
 	@Test(priority = 0)
 	public void LoginTest() throws Throwable
